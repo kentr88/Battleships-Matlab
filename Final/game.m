@@ -53,6 +53,9 @@ switch gamemode
             difficulty = input("Enter AI difficulty (1 is easiest and 3 hardest): ");
         end
 
+        close;
+        imshow(gameBoardImage);
+
         %2 difficulty variables
         aiCurrentMove = 0;
         aiInitialPos = [0, 0];  %first hit boat position
@@ -98,6 +101,9 @@ switch gamemode
         %ask for first players name
         player1Name = input("First player, please enter your name: ", "s");
 
+        close;
+        imshow(gameBoardImage)
+
         %get first players board
         [player1Vec, player1BoatData] = getBoatPosition(zeros(10, 10), gameBoardImage, boatNames, boatSpaces);
 
@@ -116,6 +122,9 @@ switch gamemode
         while strcmp(player2Name, player1Name) == 1
             player2Name = input("Your name is the same as Player 1, please enter a different name: ", "s");
         end
+
+        close;
+        imshow(gameBoardImage);
 
         %get second player's board
         [player2Vec, player2BoatData] = getBoatPosition(zeros(10, 10), gameBoardImage, boatNames, boatSpaces);
